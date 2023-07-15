@@ -27,7 +27,7 @@ def main(request):
 
 
 def testing(request):
-    mydata = Member.objects.all()
+    mydata = Member.objects.values_list('firstname')
     template = loader.get_template('template.html')
     context = {
         'mymembers': mydata,
