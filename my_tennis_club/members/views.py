@@ -27,7 +27,7 @@ def main(request):
 
 
 def testing(request):
-    mydata = Member.objects.filter(firstname__startswith='L').values()
+    mydata = Member.objects.order_by('lastname', '-id').values()
     template = loader.get_template('template.html')
     context = {
         'mymembers': mydata,
