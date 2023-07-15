@@ -2,21 +2,11 @@
 <html lang="en">
 <body>
 
-<ul>
-  {% for x in mymembers %}
-    <li>{{ x.firstname }}</li>
-  {% endfor %}
-</ul>
+{% include "mymenu.html" with me="SK" sponsor="Q9HOST" %}
 
-{% if greeting == 1 %}
-  <h1>Hello</h1>
-{% else %}
-  <h1>Bye</h1>
-{% endif %}
+<h1>Welcome</h1>
 
-{% lorem 10 w%}
-<p>In views.py you can see what the fruits variable looks like.</p>
-{% include 'footer.html' %}
+<p>This is my webpage</p>
 
 </body>
 </html>
